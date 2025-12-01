@@ -4,4 +4,4 @@ My solutions to AoC 2025:
 ## Base A
 |Day | Stars|
 |:--|---:|
-|1 | 2|
+|Day 1 | 2|
