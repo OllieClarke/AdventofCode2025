@@ -2,6 +2,6 @@
 My solutions to AoC 2025:
 
 ## Base A
-|Day | Stars|
+|Solution | Stars|
 |:--|---:|
 |Day 1 | 2|
