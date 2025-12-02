@@ -5,3 +5,4 @@ My solutions to AoC 2025:
 |Solution | Stars|
 |:--|---:|
 |Day 1 | 2|
+|Day 2 | 2|
