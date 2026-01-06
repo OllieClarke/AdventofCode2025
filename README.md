@@ -30,20 +30,25 @@ My solutions to AoC 2025:
 
 <details>
 <summary> Day 3</summary>
-  
+
+#### Workflow
 ![Day 3](BaseA/Screenies/Day%203.png)
 
+#### Calcs1
 ![Day 3 Calcs1](BaseA/Screenies/Day%203%20calcs1.png)
 
+#### Calcs2
 ![Day 3 Calcs2](BaseA/Screenies/Day%203%20calcs2.png)
 
 </details>
 
 <details>
 <summary> Day 4</summary>
-  
+
+#### Workflow
 ![Day 4](BaseA/Screenies/Day%204.png)
 
+#### Macro
 ![Day 4 Macro](BaseA/Screenies/Day%204%20macro.png)
 
 </details>
@@ -64,9 +69,14 @@ My solutions to AoC 2025:
 
 <details>
 <summary> Day 7</summary>
-  
+
+#### Workflow  
 ![Day 7](BaseA/Screenies/Day%207.png)
+
+#### Macro1
 ![Day 7 Macro1](BaseA/Screenies/Day%207%20Macro1.png)
+
+#### Macro2
 ![Day 7 Macro2](BaseA/Screenies/Day%207%20Macro2.png)
 
 </details>
