@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Iter</Name>
+          <Abbrev>i</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="pos" />
+                <Field name="Row" />
+                <Field name="Input" />
+                <Field name="Count" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>7</c>
+                  <c>-1</c>
+                  <c>|</c>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>data</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="95" />
+              <Fields>
+                <Field name="pos" />
+                <Field name="Row" />
+                <Field name="Input" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>7</c>
+                  <c>4</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>4</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>4</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>4</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>4</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>5</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>5</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>5</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>10</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>10</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>2</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>2</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>2</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>13</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>12</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>12</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>9</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>14</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>0</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>14</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>1</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>13</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>14</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>6</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>6</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>6</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>6</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>6</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>0</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>1</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>9</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>5</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>3</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>8</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>8</c>
+                  <c>^</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>3</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>3</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>7</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>12</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>2</c>
+                  <c>11</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>10</c>
+                  <c>7</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>6</c>
+                  <c>7</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>4</c>
+                  <c>7</c>
+                  <c>|</c>
+                </r>
+                <r>
+                  <c>8</c>
+                  <c>7</c>
+                  <c>|</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="954" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>iter</Name>
+          <Abbrev>i</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1050" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>data</Name>
+          <Abbrev>d</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="546" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Right_pos" action="GroupBy" rename="pos" />
+            <SummarizeField field="Right_Row" action="GroupBy" rename="Row" />
+            <SummarizeField field="Right_Input" action="GroupBy" rename="Input" />
+            <SummarizeField field="Count" action="GroupBy" rename="Count" />
+            <SummarizeField field="pos" action="Count" rename="New" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="Summarize: GroupBy - Right_pos" type="Int32" />
+            <Field name="Row" source="Summarize: GroupBy - Right_Row" type="Int32" />
+            <Field name="Input" size="2147483647" source="Summarize: GroupBy - Right_Input" type="V_String" />
+            <Field name="Count" source="Summarize: GroupBy - Count" type="Int32" />
+            <Field name="New" source="Summarize: Count - Right_pos" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="834" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]" field="iter" size="2" type="Int16" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[iter = [Engine.IterationNumber]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="Summarize: GroupBy - Right_pos" type="Int32" />
+            <Field name="Row" source="Summarize: GroupBy - Right_Row" type="Int32" />
+            <Field name="Input" size="2147483647" source="Summarize: GroupBy - Right_Input" type="V_String" />
+            <Field name="Count" source="Formula: [Count]*[New]" type="Int32" />
+            <Field name="iter" source="Formula: [Engine.IterationNumber]" type="Int16" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="414" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>([pos]=[Right_pos] and [Input]='|')
+OR
+([Input]='^' AND between([Right_pos],[pos]-1,[pos]+1) AND [pos]!=[Right_pos])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>([pos]=[Right_pos] and [Input]='|')
+OR
+([Input]='^' AND between([Right_pos],[pos...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+            <Field name="Join" source="Formula: [Row]+1" type="Int64" />
+            <Field name="Right_pos" source="TextInput:" type="Int32" />
+            <Field name="Right_Row" source="TextInput:" type="Int32" />
+            <Field name="Right_Input" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+            <Field name="Join" source="Formula: [Row]+1" type="Int64" />
+            <Field name="Right_pos" source="TextInput:" type="Int32" />
+            <Field name="Right_Row" source="TextInput:" type="Int32" />
+            <Field name="Right_Input" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="318" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Join" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Row" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_pos" selected="True" rename="Right_pos" input="Right_" />
+                <SelectField field="Right_Row" selected="True" rename="Right_Row" input="Right_" />
+                <SelectField field="Right_Input" selected="True" rename="Right_Input" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+            <Field name="Join" source="Formula: [Row]+1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+            <Field name="Join" source="Formula: [Row]+1" type="Int64" />
+            <Field name="Right_pos" source="TextInput:" type="Int32" />
+            <Field name="Right_Row" source="TextInput:" type="Int32" />
+            <Field name="Right_Input" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Row]+1" field="Join" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Join = [Row]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="TextInput:" type="Int32" />
+            <Field name="Row" source="TextInput:" type="Int32" />
+            <Field name="Input" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+            <Field name="Join" source="Formula: [Row]+1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="738" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="New" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="Summarize: GroupBy - Right_pos" type="Int32" />
+            <Field name="Row" source="Summarize: GroupBy - Right_Row" type="Int32" />
+            <Field name="Input" size="2147483647" source="Summarize: GroupBy - Right_Input" type="V_String" />
+            <Field name="Count" source="Formula: [Count]*[New]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="642" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Count]*[New]" field="Count" size="4" type="Int32" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Count = [Count]*[New]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="pos" source="Summarize: GroupBy - Right_pos" type="Int32" />
+            <Field name="Row" source="Summarize: GroupBy - Right_Row" type="Int32" />
+            <Field name="Input" size="2147483647" source="Summarize: GroupBy - Right_Input" type="V_String" />
+            <Field name="Count" source="Formula: [Count]*[New]" type="Int32" />
+            <Field name="New" source="Summarize: Count - Right_pos" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="17" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (12)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (13)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day 7_3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1490c717-2d24-44c5-8a60-9b9959c803e3" />
+      <Telemetry>
+        <PreviousWorkflowId value="d14b6a3c-6549-4ff5-9ed1-0bd613573c49" />
+        <OriginWorkflowId value="d14b6a3c-6549-4ff5-9ed1-0bd613573c49" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (12)</Description>
+              <Name>Macro Output (12)</Name>
+              <ToolId value="12" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (13)</Description>
+              <Name>Macro Output (13)</Name>
+              <ToolId value="13" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Iter</Input>
+        <Output>iter</Output>
+        <IterationLimit value="9999" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="19" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
