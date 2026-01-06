@@ -9,6 +9,8 @@ My solutions to AoC 2025:
 |Day 3 | 2|
 |Day 4 | 2|
 |Day 5 | 2|
+|Day 6 | 2|
+|Day 7 | 2|
 
 ### Solutions
 
@@ -50,5 +52,21 @@ My solutions to AoC 2025:
 <summary> Day 5</summary>
   
 ![Day 5](BaseA/Screenies/Day%205.png)
+
+</details>
+
+<details>
+<summary> Day 6</summary>
+  
+![Day 6](BaseA/Screenies/Day%206.png)
+
+</details>
+
+<details>
+<summary> Day 7</summary>
+  
+![Day 7](BaseA/Screenies/Day%207.png)
+![Day 7 Macro1](BaseA/Screenies/Day%207%20Macro1.png)
+![Day 7 Macro2](BaseA/Screenies/Day%207%20Macro2.png)
 
 </details>
