@@ -1,0 +1,2482 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="126" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="input" />
+          </Fields>
+          <Data>
+            <r>
+              <c>aaa: you hhh</c>
+            </r>
+            <r>
+              <c>you: bbb ccc</c>
+            </r>
+            <r>
+              <c>bbb: ddd eee</c>
+            </r>
+            <r>
+              <c>ccc: ddd eee fff</c>
+            </r>
+            <r>
+              <c>ddd: ggg</c>
+            </r>
+            <r>
+              <c>eee: out</c>
+            </r>
+            <r>
+              <c>fff: out</c>
+            </r>
+            <r>
+              <c>ggg: out</c>
+            </r>
+            <r>
+              <c>hhh: ccc fff iii</c>
+            </r>
+            <r>
+              <c>iii: out</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Template</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="210" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>input</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>
+          </RootName>
+          <Delimeters value=":" />
+          <NumFields value="2" />
+          <Mode value="Columns" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>split parent and children</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="318" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>2</Field>
+          <Delimeters value=" " />
+          <NumFields value="3" />
+          <Mode value="Rows" />
+          <Flags value="16" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>split children to rows</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="498" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Path" selected="True" type="V_String" size="99999" />
+            <SelectField field="input" selected="False" />
+            <SelectField field="1" selected="True" rename="Parent" size="99999" />
+            <SelectField field="2" selected="True" rename="Child" size="99999" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>rename</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="402" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>Path</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType size="4">String</FieldType>
+          <FieldSize>4</FieldSize>
+          <Position>0</Position>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="606" y="67" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[Parent] = "you"
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[[Parent] = "you"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings>
+        <Position x="738" y="115" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Day 11 (8)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro=".\Day 11.yxmc" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings>
+        <Position x="834" y="103" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="CountRecords.yxmc" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="582" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Parent</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2026-01-07 14:53:37</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>svr</Operand>
+              <StartDate>2026-01-07 14:53:37</StartDate>
+              <EndDate>2026-01-07 14:53:37</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Parent] = "svr"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="918" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[hit_fft] = 1
+and [hit_dac]=1</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[hit_fft] = 1
+and [hit_dac]=1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1110" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ollie\AppData\Local\Temp\Alteryx\Engine_4700_85d69aaf3dfc42129ff2a97b31ea37e8_\Engine_4700_a038dc2d500c4cf0b353871623622073~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="63">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="690" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="0" field="hit_fft" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="0" field="hit_dac" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="1" field="Count" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[hit_fft = 0
+hit_dac = 0
+Count = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings>
+        <Position x="822" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Day 11_2 (19)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="G:\My Drive\DS8\Advent of Code\2025\Solutions\Day 11_2.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="930" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ollie\AppData\Local\Temp\Alteryx\Engine_4700_85d69aaf3dfc42129ff2a97b31ea37e8_\Engine_4700_100d191160c243b48cfb4c1981d8c755~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="126" y="223" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="643" />
+          <Fields>
+            <Field name="input" />
+          </Fields>
+          <Data>
+            <r>
+              <c>wfc: ond mpw vsz</c>
+            </r>
+            <r>
+              <c>qxn: mow khk</c>
+            </r>
+            <r>
+              <c>nzf: rti sqv</c>
+            </r>
+            <r>
+              <c>ehm: von pgy fxk</c>
+            </r>
+            <r>
+              <c>nlt: pdl hwf</c>
+            </r>
+            <r>
+              <c>xqa: qvc cih</c>
+            </r>
+            <r>
+              <c>ghq: ren</c>
+            </r>
+            <r>
+              <c>jze: gbj</c>
+            </r>
+            <r>
+              <c>qrt: bug rxr plt cre vkd</c>
+            </r>
+            <r>
+              <c>vqt: kkx hbz ipe hiq</c>
+            </r>
+            <r>
+              <c>auk: out</c>
+            </r>
+            <r>
+              <c>vkq: lnb kyc</c>
+            </r>
+            <r>
+              <c>evj: jmy</c>
+            </r>
+            <r>
+              <c>ydi: goh gab tpj azd mlq fdi jom qii wyt</c>
+            </r>
+            <r>
+              <c>olh: qrt gbj</c>
+            </r>
+            <r>
+              <c>mmm: yfi dgv ppv wsf</c>
+            </r>
+            <r>
+              <c>zry: cne bqx nlt</c>
+            </r>
+            <r>
+              <c>lim: rlc gih</c>
+            </r>
+            <r>
+              <c>dac: ren cyv fnu</c>
+            </r>
+            <r>
+              <c>ufv: llo ydi</c>
+            </r>
+            <r>
+              <c>bkv: out</c>
+            </r>
+            <r>
+              <c>zne: dja jlj bzj wfc gms</c>
+            </r>
+            <r>
+              <c>gea: kwy stx kxt xmj</c>
+            </r>
+            <r>
+              <c>vjp: ngk</c>
+            </r>
+            <r>
+              <c>zpy: olh</c>
+            </r>
+            <r>
+              <c>gzb: zkz pti dog</c>
+            </r>
+            <r>
+              <c>hiq: sdq veq wss qxn whx</c>
+            </r>
+            <r>
+              <c>zeo: jci inl</c>
+            </r>
+            <r>
+              <c>lqm: lnb kyc</c>
+            </r>
+            <r>
+              <c>maq: ysa bft hcm</c>
+            </r>
+            <r>
+              <c>evv: lnb</c>
+            </r>
+            <r>
+              <c>ujm: udx uvu ntx ehm</c>
+            </r>
+            <r>
+              <c>may: toh</c>
+            </r>
+            <r>
+              <c>rin: ltg</c>
+            </r>
+            <r>
+              <c>vcs: yer</c>
+            </r>
+            <r>
+              <c>uop: xnm</c>
+            </r>
+            <r>
+              <c>fxk: hiq kkx hbz ipe</c>
+            </r>
+            <r>
+              <c>kqv: jpt rxd</c>
+            </r>
+            <r>
+              <c>nwx: kkx fnd hbz ipe</c>
+            </r>
+            <r>
+              <c>seq: uvu udx</c>
+            </r>
+            <r>
+              <c>iez: out</c>
+            </r>
+            <r>
+              <c>sii: vnk</c>
+            </r>
+            <r>
+              <c>you: fuz kat zup ffd kzl dpd rtn ftr qno</c>
+            </r>
+            <r>
+              <c>msu: you</c>
+            </r>
+            <r>
+              <c>huw: maq omi</c>
+            </r>
+            <r>
+              <c>qop: yfr fpt xar fzq</c>
+            </r>
+            <r>
+              <c>mcp: olh jkl</c>
+            </r>
+            <r>
+              <c>xzq: inl</c>
+            </r>
+            <r>
+              <c>ejj: nqh mmm</c>
+            </r>
+            <r>
+              <c>juq: tmi gzb zpk nxw</c>
+            </r>
+            <r>
+              <c>yrn: vnk</c>
+            </r>
+            <r>
+              <c>jdm: vye</c>
+            </r>
+            <r>
+              <c>fev: xot tez</c>
+            </r>
+            <r>
+              <c>wss: wyf</c>
+            </r>
+            <r>
+              <c>phg: xrc hcm bft</c>
+            </r>
+            <r>
+              <c>cpn: nsz upq tuc</c>
+            </r>
+            <r>
+              <c>jds: gpx</c>
+            </r>
+            <r>
+              <c>eca: pvz</c>
+            </r>
+            <r>
+              <c>qqm: fbj mtv sbo zwu</c>
+            </r>
+            <r>
+              <c>kkx: lci jcd pgv zry wqb veq doj hrm fli sdq</c>
+            </r>
+            <r>
+              <c>yqr: goy fnu</c>
+            </r>
+            <r>
+              <c>uvu: fxk czo</c>
+            </r>
+            <r>
+              <c>ufe: hiq kkx ipe hbz</c>
+            </r>
+            <r>
+              <c>qvc: yew nhj yag hnf jge</c>
+            </r>
+            <r>
+              <c>mbd: yzg rcm</c>
+            </r>
+            <r>
+              <c>bfy: xqd nzf</c>
+            </r>
+            <r>
+              <c>ral: jmy qbv rtk</c>
+            </r>
+            <r>
+              <c>cgh: qks xot alh</c>
+            </r>
+            <r>
+              <c>hwr: xar fzq</c>
+            </r>
+            <r>
+              <c>vvg: sym wdp khl</c>
+            </r>
+            <r>
+              <c>ofr: qhc</c>
+            </r>
+            <r>
+              <c>izc: dxc upp</c>
+            </r>
+            <r>
+              <c>jcd: khk cmh mow</c>
+            </r>
+            <r>
+              <c>xmj: wyc ygz</c>
+            </r>
+            <r>
+              <c>xqd: sqv rti ufs</c>
+            </r>
+            <r>
+              <c>htj: yqc tkl glz</c>
+            </r>
+            <r>
+              <c>kmo: kzi</c>
+            </r>
+            <r>
+              <c>piz: uyw yma pcg</c>
+            </r>
+            <r>
+              <c>zge: zag</c>
+            </r>
+            <r>
+              <c>vfm: kvk</c>
+            </r>
+            <r>
+              <c>uyw: obh</c>
+            </r>
+            <r>
+              <c>jom: zdm frc ojx jrd fjw</c>
+            </r>
+            <r>
+              <c>khk: bxi</c>
+            </r>
+            <r>
+              <c>fpt: pgl wvy</c>
+            </r>
+            <r>
+              <c>thw: lnb you</c>
+            </r>
+            <r>
+              <c>upq: uwr</c>
+            </r>
+            <r>
+              <c>kxd: zfc vex cxd tnl</c>
+            </r>
+            <r>
+              <c>rcm: toh hzk</c>
+            </r>
+            <r>
+              <c>mpw: zvf llo ydi</c>
+            </r>
+            <r>
+              <c>bep: ugq</c>
+            </r>
+            <r>
+              <c>pih: kxd jdx grs</c>
+            </r>
+            <r>
+              <c>yyr: sja fye</c>
+            </r>
+            <r>
+              <c>kic: ffp eeo wjb</c>
+            </r>
+            <r>
+              <c>jnx: wvy</c>
+            </r>
+            <r>
+              <c>eav: vnw lbn lpe</c>
+            </r>
+            <r>
+              <c>stx: ygz ngo bgs</c>
+            </r>
+            <r>
+              <c>nhj: fnd kkx hiq</c>
+            </r>
+            <r>
+              <c>bzj: ond mpw vsz</c>
+            </r>
+            <r>
+              <c>xsv: bxf zus wag rxu</c>
+            </r>
+            <r>
+              <c>ffd: vjp</c>
+            </r>
+            <r>
+              <c>vnw: enr ikg krf</c>
+            </r>
+            <r>
+              <c>agq: ofv</c>
+            </r>
+            <r>
+              <c>doj: zwu mtv</c>
+            </r>
+            <r>
+              <c>qew: nne fhl ahb</c>
+            </r>
+            <r>
+              <c>wnq: uvu ehm</c>
+            </r>
+            <r>
+              <c>ftr: xjl viv</c>
+            </r>
+            <r>
+              <c>gnm: tul jtm fft</c>
+            </r>
+            <r>
+              <c>veq: bqx</c>
+            </r>
+            <r>
+              <c>ily: vnk</c>
+            </r>
+            <r>
+              <c>bxi: bxf wag wtf</c>
+            </r>
+            <r>
+              <c>esu: otj lzl cgh</c>
+            </r>
+            <r>
+              <c>khl: kyn</c>
+            </r>
+            <r>
+              <c>goy: lnb you</c>
+            </r>
+            <r>
+              <c>mrd: you</c>
+            </r>
+            <r>
+              <c>ikt: ipe hiq</c>
+            </r>
+            <r>
+              <c>jci: xrc hcm</c>
+            </r>
+            <r>
+              <c>egf: jno rmv</c>
+            </r>
+            <r>
+              <c>ezq: may</c>
+            </r>
+            <r>
+              <c>vsg: qvc jgx</c>
+            </r>
+            <r>
+              <c>zfm: oag apc blg</c>
+            </r>
+            <r>
+              <c>ydr: xrc hcm</c>
+            </r>
+            <r>
+              <c>nly: llo zvf</c>
+            </r>
+            <r>
+              <c>xrc: vup mci xqa qhh vsg dqt vrt yyr vfm pxk nkv</c>
+            </r>
+            <r>
+              <c>uvb: nwx</c>
+            </r>
+            <r>
+              <c>ual: myr krv</c>
+            </r>
+            <r>
+              <c>dja: vsz mpw</c>
+            </r>
+            <r>
+              <c>qeb: kkx ipe hbz hiq</c>
+            </r>
+            <r>
+              <c>tys: jci rio</c>
+            </r>
+            <r>
+              <c>aib: tys zeo gnt</c>
+            </r>
+            <r>
+              <c>rtn: jpt vjp</c>
+            </r>
+            <r>
+              <c>jnh: qvl byz xpt ibx</c>
+            </r>
+            <r>
+              <c>xjl: jds</c>
+            </r>
+            <r>
+              <c>ogd: aji ral use</c>
+            </r>
+            <r>
+              <c>sdq: yqr any bgj</c>
+            </r>
+            <r>
+              <c>pec: ipe</c>
+            </r>
+            <r>
+              <c>fqv: ugq</c>
+            </r>
+            <r>
+              <c>svb: kyc</c>
+            </r>
+            <r>
+              <c>rpw: itt qsb</c>
+            </r>
+            <r>
+              <c>gpx: nzf sgh xqd</c>
+            </r>
+            <r>
+              <c>mow: ohg bxi</c>
+            </r>
+            <r>
+              <c>csk: vvg hsf</c>
+            </r>
+            <r>
+              <c>von: ipe fnd</c>
+            </r>
+            <r>
+              <c>qhh: ibx</c>
+            </r>
+            <r>
+              <c>wmw: tqi ber doh</c>
+            </r>
+            <r>
+              <c>dqt: cih</c>
+            </r>
+            <r>
+              <c>yqc: bft hcm ysa</c>
+            </r>
+            <r>
+              <c>bsq: jdm kzi rir nxk</c>
+            </r>
+            <r>
+              <c>owb: lmw htj ofv</c>
+            </r>
+            <r>
+              <c>yag: kkx</c>
+            </r>
+            <r>
+              <c>fhl: sjq sbz</c>
+            </r>
+            <r>
+              <c>hyp: kyc you</c>
+            </r>
+            <r>
+              <c>tez: bkx</c>
+            </r>
+            <r>
+              <c>thx: ofr zeo</c>
+            </r>
+            <r>
+              <c>vfb: jde ofo</c>
+            </r>
+            <r>
+              <c>tuc: jrz vqt</c>
+            </r>
+            <r>
+              <c>joi: smo afx</c>
+            </r>
+            <r>
+              <c>sqs: nax jgl joi</c>
+            </r>
+            <r>
+              <c>wvy: toh vnk hzk</c>
+            </r>
+            <r>
+              <c>xlf: fnd</c>
+            </r>
+            <r>
+              <c>lay: vey pkr</c>
+            </r>
+            <r>
+              <c>gnt: jci rio qhc</c>
+            </r>
+            <r>
+              <c>rmv: uwf fqb</c>
+            </r>
+            <r>
+              <c>bwk: sja jiv</c>
+            </r>
+            <r>
+              <c>duc: you lnb kyc</c>
+            </r>
+            <r>
+              <c>fqb: out</c>
+            </r>
+            <r>
+              <c>uxn: jgx cih</c>
+            </r>
+            <r>
+              <c>gia: rxd vjp</c>
+            </r>
+            <r>
+              <c>kgl: die vkq</c>
+            </r>
+            <r>
+              <c>ufs: out</c>
+            </r>
+            <r>
+              <c>kvy: zua</c>
+            </r>
+            <r>
+              <c>thi: out</c>
+            </r>
+            <r>
+              <c>wsf: twk</c>
+            </r>
+            <r>
+              <c>oag: mym zua</c>
+            </r>
+            <r>
+              <c>bxf: vin msu loy</c>
+            </r>
+            <r>
+              <c>gxy: jds smg xqh</c>
+            </r>
+            <r>
+              <c>hzl: egf inc</c>
+            </r>
+            <r>
+              <c>zup: ejj</c>
+            </r>
+            <r>
+              <c>kml: uvb myr</c>
+            </r>
+            <r>
+              <c>deb: wlw cpn dka</c>
+            </r>
+            <r>
+              <c>xjb: wkv ejj qpn</c>
+            </r>
+            <r>
+              <c>nnk: ugk</c>
+            </r>
+            <r>
+              <c>lzm: jjv</c>
+            </r>
+            <r>
+              <c>bum: upk shw egy</c>
+            </r>
+            <r>
+              <c>dlb: sii hay ltg rgb</c>
+            </r>
+            <r>
+              <c>jrd: phg kou nql</c>
+            </r>
+            <r>
+              <c>nkv: lvv upp dxc</c>
+            </r>
+            <r>
+              <c>gab: ztn cdj</c>
+            </r>
+            <r>
+              <c>wyc: pkr qpq vey</c>
+            </r>
+            <r>
+              <c>jta: kkx fnd hbz ipe</c>
+            </r>
+            <r>
+              <c>alh: bkx ltx hze</c>
+            </r>
+            <r>
+              <c>wlw: tuc</c>
+            </r>
+            <r>
+              <c>uvh: ydi zvf llo</c>
+            </r>
+            <r>
+              <c>igw: qvl byz</c>
+            </r>
+            <r>
+              <c>uep: aib</c>
+            </r>
+            <r>
+              <c>lpe: ikg enr krf crd</c>
+            </r>
+            <r>
+              <c>vda: rlc gih xvx</c>
+            </r>
+            <r>
+              <c>qno: xmj kxt omo stx kwy</c>
+            </r>
+            <r>
+              <c>qii: frc fjw</c>
+            </r>
+            <r>
+              <c>jdx: tnl fum vex</c>
+            </r>
+            <r>
+              <c>wkv: nlc rje nqh</c>
+            </r>
+            <r>
+              <c>qhj: jjv</c>
+            </r>
+            <r>
+              <c>fpk: xvx</c>
+            </r>
+            <r>
+              <c>rxu: loy msu vin lqm</c>
+            </r>
+            <r>
+              <c>wey: mjb qew rcv ora oad yqa ptp tvr fcu zgf bcz dmd jca dmw gfv itk pka</c>
+            </r>
+            <r>
+              <c>ahf: giq qvw ajg</c>
+            </r>
+            <r>
+              <c>jgl: afx zfk smo kgl</c>
+            </r>
+            <r>
+              <c>lmw: glz tkl</c>
+            </r>
+            <r>
+              <c>gwf: vnk toh</c>
+            </r>
+            <r>
+              <c>fpr: hcm ysa</c>
+            </r>
+            <r>
+              <c>hze: qsp uyb</c>
+            </r>
+            <r>
+              <c>xar: sha wvy</c>
+            </r>
+            <r>
+              <c>yun: ojx zdm</c>
+            </r>
+            <r>
+              <c>esd: vnw cbv lpe</c>
+            </r>
+            <r>
+              <c>hnf: fnd kkx</c>
+            </r>
+            <r>
+              <c>omi: bft hcm ysa xrc</c>
+            </r>
+            <r>
+              <c>cmh: ohg uih xsv</c>
+            </r>
+            <r>
+              <c>sao: out</c>
+            </r>
+            <r>
+              <c>noa: bkv fct cqx</c>
+            </r>
+            <r>
+              <c>mlq: tlg</c>
+            </r>
+            <r>
+              <c>ngo: qpq vey</c>
+            </r>
+            <r>
+              <c>jge: hiq hbz fnd kkx</c>
+            </r>
+            <r>
+              <c>fba: you kyc</c>
+            </r>
+            <r>
+              <c>nsz: vqt jrz</c>
+            </r>
+            <r>
+              <c>qkr: thi iez</c>
+            </r>
+            <r>
+              <c>cqx: out</c>
+            </r>
+            <r>
+              <c>ugq: nnn</c>
+            </r>
+            <r>
+              <c>wxo: lmw htj</c>
+            </r>
+            <r>
+              <c>uwr: kkx fnd ipe</c>
+            </r>
+            <r>
+              <c>rsz: jpt rxd</c>
+            </r>
+            <r>
+              <c>mjb: bff nze</c>
+            </r>
+            <r>
+              <c>xun: llo zvf ydi jhh</c>
+            </r>
+            <r>
+              <c>dpn: xnx</c>
+            </r>
+            <r>
+              <c>agk: wpb gnm ugk</c>
+            </r>
+            <r>
+              <c>ptp: jcw fpk vda lim</c>
+            </r>
+            <r>
+              <c>euq: auk</c>
+            </r>
+            <r>
+              <c>oad: fhl ahb yep nne</c>
+            </r>
+            <r>
+              <c>dwr: jnx yfr</c>
+            </r>
+            <r>
+              <c>kux: eqw</c>
+            </r>
+            <r>
+              <c>tpj: fjw zdm frc</c>
+            </r>
+            <r>
+              <c>qpq: noa ijb</c>
+            </r>
+            <r>
+              <c>vsz: jhh ydi</c>
+            </r>
+            <r>
+              <c>oaa: tmp ehl</c>
+            </r>
+            <r>
+              <c>mci: dxc lvv</c>
+            </r>
+            <r>
+              <c>lgn: eca esv egf inc</c>
+            </r>
+            <r>
+              <c>axf: xrb dhn vsl fxs</c>
+            </r>
+            <r>
+              <c>qsp: auk doh</c>
+            </r>
+            <r>
+              <c>jtm: jdx htf</c>
+            </r>
+            <r>
+              <c>kpy: eeo ffp</c>
+            </r>
+            <r>
+              <c>cwo: jze jkl</c>
+            </r>
+            <r>
+              <c>pgv: cne</c>
+            </r>
+            <r>
+              <c>lci: joi jgl</c>
+            </r>
+            <r>
+              <c>crd: zvf llo</c>
+            </r>
+            <r>
+              <c>qks: hze</c>
+            </r>
+            <r>
+              <c>uih: wtf zus</c>
+            </r>
+            <r>
+              <c>krv: qeb</c>
+            </r>
+            <r>
+              <c>vtg: hzk vnk toh</c>
+            </r>
+            <r>
+              <c>ldy: ysa xrc bft hcm</c>
+            </r>
+            <r>
+              <c>ykn: llo ydi jhh</c>
+            </r>
+            <r>
+              <c>obh: vyp yer</c>
+            </r>
+            <r>
+              <c>rti: out</c>
+            </r>
+            <r>
+              <c>twk: vsl fxs xrb dhn pkx</c>
+            </r>
+            <r>
+              <c>lxk: htj lmw</c>
+            </r>
+            <r>
+              <c>any: goy fnu</c>
+            </r>
+            <r>
+              <c>zua: rrf jde ofo</c>
+            </r>
+            <r>
+              <c>inl: ysa</c>
+            </r>
+            <r>
+              <c>ljh: aji</c>
+            </r>
+            <r>
+              <c>vhk: vnw lpe cbv</c>
+            </r>
+            <r>
+              <c>hcm: nkv igw xqa izc awr</c>
+            </r>
+            <r>
+              <c>sgh: rti sqv</c>
+            </r>
+            <r>
+              <c>ypr: fxs</c>
+            </r>
+            <r>
+              <c>mdu: sii ltg</c>
+            </r>
+            <r>
+              <c>hrm: nax</c>
+            </r>
+            <r>
+              <c>kfo: pka nek dmd jca gfv dmw itk tvr juq zgf mjb qew bum oad ora</c>
+            </r>
+            <r>
+              <c>zpk: oaa</c>
+            </r>
+            <r>
+              <c>enr: llo ydi</c>
+            </r>
+            <r>
+              <c>gfm: ufe</c>
+            </r>
+            <r>
+              <c>rct: jjv wnu</c>
+            </r>
+            <r>
+              <c>oqj: fqb</c>
+            </r>
+            <r>
+              <c>pka: zpk ykm tmi gzb</c>
+            </r>
+            <r>
+              <c>ove: dja jlj wfc gms</c>
+            </r>
+            <r>
+              <c>gyr: wpb</c>
+            </r>
+            <r>
+              <c>yew: kkx ipe hbz hiq</c>
+            </r>
+            <r>
+              <c>fnd: doj veq gey wqb fjr ppw whx</c>
+            </r>
+            <r>
+              <c>mgv: krv uvb</c>
+            </r>
+            <r>
+              <c>blg: zua vfb mck</c>
+            </r>
+            <r>
+              <c>ofv: tkl glz sxb</c>
+            </r>
+            <r>
+              <c>tkt: ord</c>
+            </r>
+            <r>
+              <c>eqw: hzk</c>
+            </r>
+            <r>
+              <c>ead: aib thx htk</c>
+            </r>
+            <r>
+              <c>vnk: jvj agk eav vsk tql vhk zne zge rct ogd dpn nuo ljh qhj nfv ove qck tvi qnw vmf lzm nnk gjj oxu</c>
+            </r>
+            <r>
+              <c>ojx: nql phg</c>
+            </r>
+            <r>
+              <c>dag: lnb you</c>
+            </r>
+            <r>
+              <c>nlk: cgh</c>
+            </r>
+            <r>
+              <c>jlj: vsz ond</c>
+            </r>
+            <r>
+              <c>rrf: fpr tde maq</c>
+            </r>
+            <r>
+              <c>cko: jjv wnu gcq</c>
+            </r>
+            <r>
+              <c>plm: lug cwo</c>
+            </r>
+            <r>
+              <c>sjq: ezq ahf owp</c>
+            </r>
+            <r>
+              <c>vin: you kyc lnb</c>
+            </r>
+            <r>
+              <c>ldb: kvy apc tlg oag</c>
+            </r>
+            <r>
+              <c>ltx: euq wmw uyb tmg qsp</c>
+            </r>
+            <r>
+              <c>yep: sbz sjq</c>
+            </r>
+            <r>
+              <c>fxs: out</c>
+            </r>
+            <r>
+              <c>ehl: luj rcm yzg</c>
+            </r>
+            <r>
+              <c>tmi: imc zkz pti oaa</c>
+            </r>
+            <r>
+              <c>jcw: xvx</c>
+            </r>
+            <r>
+              <c>syi: kwy omo kxt</c>
+            </r>
+            <r>
+              <c>lvv: zgq xlf ikt</c>
+            </r>
+            <r>
+              <c>tlg: vfb</c>
+            </r>
+            <r>
+              <c>bfl: yrn</c>
+            </r>
+            <r>
+              <c>dtz: otj fev cgh lzl</c>
+            </r>
+            <r>
+              <c>dxc: xlf zgq</c>
+            </r>
+            <r>
+              <c>ylj: iab kic</c>
+            </r>
+            <r>
+              <c>yfr: wvy</c>
+            </r>
+            <r>
+              <c>txz: ltg hay rgb</c>
+            </r>
+            <r>
+              <c>wbq: blg apc kvy</c>
+            </r>
+            <r>
+              <c>vkd: hcm</c>
+            </r>
+            <r>
+              <c>yyv: vtg</c>
+            </r>
+            <r>
+              <c>wft: etd hsf fqv vvg</c>
+            </r>
+            <r>
+              <c>bcz: qop dwr</c>
+            </r>
+            <r>
+              <c>vmf: gcq</c>
+            </r>
+            <r>
+              <c>qhc: bft hcm</c>
+            </r>
+            <r>
+              <c>grs: vex zfc tnl cxd fum</c>
+            </r>
+            <r>
+              <c>rjj: ntx uvu</c>
+            </r>
+            <r>
+              <c>wib: duc</c>
+            </r>
+            <r>
+              <c>acd: kyc</c>
+            </r>
+            <r>
+              <c>cbv: enr</c>
+            </r>
+            <r>
+              <c>cdj: rpw rja xnm dnb</c>
+            </r>
+            <r>
+              <c>jhh: zfm ead owb myy qii uep agq rji mlq fdi plm yun lxk goh vmc ldb gab tpj</c>
+            </r>
+            <r>
+              <c>bft: vfm izc vrt yyr igw dqt jnh vsg vel bwk uxn nkv pxk deb xqa mci awr vup fah</c>
+            </r>
+            <r>
+              <c>sym: kyn jdt</c>
+            </r>
+            <r>
+              <c>czo: fnd hbz</c>
+            </r>
+            <r>
+              <c>otj: alh xot qks</c>
+            </r>
+            <r>
+              <c>rcv: bff nze</c>
+            </r>
+            <r>
+              <c>tnl: zvf</c>
+            </r>
+            <r>
+              <c>jca: pyi kux</c>
+            </r>
+            <r>
+              <c>nsh: gxy</c>
+            </r>
+            <r>
+              <c>rxd: ngk hzl</c>
+            </r>
+            <r>
+              <c>zus: evv loy vin</c>
+            </r>
+            <r>
+              <c>zfk: hyp vkq</c>
+            </r>
+            <r>
+              <c>afx: vkq die mrd fba</c>
+            </r>
+            <r>
+              <c>flm: yqr dac ghq bgj</c>
+            </r>
+            <r>
+              <c>nne: sjq zev</c>
+            </r>
+            <r>
+              <c>ohg: wtf wag</c>
+            </r>
+            <r>
+              <c>dmd: xxk</c>
+            </r>
+            <r>
+              <c>yqa: pyi kux</c>
+            </r>
+            <r>
+              <c>omo: lay</c>
+            </r>
+            <r>
+              <c>krf: jhh</c>
+            </r>
+            <r>
+              <c>lnb: zwb piz nsh gea wef nlk fuz dtz gia kqv</c>
+            </r>
+            <r>
+              <c>knl: fyd uvu udx</c>
+            </r>
+            <r>
+              <c>fah: ylj</c>
+            </r>
+            <r>
+              <c>ffp: tfw pec</c>
+            </r>
+            <r>
+              <c>vel: wlw dka</c>
+            </r>
+            <r>
+              <c>qxd: van ulx qkr</c>
+            </r>
+            <r>
+              <c>zkz: tmp ehl</c>
+            </r>
+            <r>
+              <c>qvw: vnk</c>
+            </r>
+            <r>
+              <c>lzl: tez xot alh</c>
+            </r>
+            <r>
+              <c>llo: gab tpj wbq ldb vmc wxo wyt goh qtw lxk yun plm azd fdi rji agq myy owb zfm qii uep rry</c>
+            </r>
+            <r>
+              <c>doe: svb pdd duc</c>
+            </r>
+            <r>
+              <c>yje: qvw giq</c>
+            </r>
+            <r>
+              <c>zcu: jhh</c>
+            </r>
+            <r>
+              <c>ppv: ypr jdg axf</c>
+            </r>
+            <r>
+              <c>xnx: fqv</c>
+            </r>
+            <r>
+              <c>fli: doe vwj wib wyf</c>
+            </r>
+            <r>
+              <c>fcu: nne</c>
+            </r>
+            <r>
+              <c>plt: ysa hcm</c>
+            </r>
+            <r>
+              <c>xpt: kml ual mgv qrq</c>
+            </r>
+            <r>
+              <c>jde: tde fpr</c>
+            </r>
+            <r>
+              <c>jdg: dhn pkx vsl fxs</c>
+            </r>
+            <r>
+              <c>wnu: tkt kmo dyq</c>
+            </r>
+            <r>
+              <c>zwu: acd</c>
+            </r>
+            <r>
+              <c>fuz: kwy xmj</c>
+            </r>
+            <r>
+              <c>iab: sli</c>
+            </r>
+            <r>
+              <c>jjv: bsq dyq kmo nhd</c>
+            </r>
+            <r>
+              <c>kzi: vye ufv xun zcu</c>
+            </r>
+            <r>
+              <c>dog: kfe tmp kvo</c>
+            </r>
+            <r>
+              <c>dgv: axf jdg</c>
+            </r>
+            <r>
+              <c>wtf: loy</c>
+            </r>
+            <r>
+              <c>kwy: ygz</c>
+            </r>
+            <r>
+              <c>rgb: hzk toh</c>
+            </r>
+            <r>
+              <c>bqx: hwf pdl thw mqb dag</c>
+            </r>
+            <r>
+              <c>nax: zfk afx</c>
+            </r>
+            <r>
+              <c>gmw: kyc you</c>
+            </r>
+            <r>
+              <c>fte: yma</c>
+            </r>
+            <r>
+              <c>dhn: out</c>
+            </r>
+            <r>
+              <c>pdl: lnb</c>
+            </r>
+            <r>
+              <c>cne: mqb thw</c>
+            </r>
+            <r>
+              <c>nnn: zvf</c>
+            </r>
+            <r>
+              <c>lbn: ykn ikg</c>
+            </r>
+            <r>
+              <c>ahb: zev sjq</c>
+            </r>
+            <r>
+              <c>nze: jnx fpt xar</c>
+            </r>
+            <r>
+              <c>tvr: qop</c>
+            </r>
+            <r>
+              <c>ord: nly vye xun zcu</c>
+            </r>
+            <r>
+              <c>pdd: you lnb</c>
+            </r>
+            <r>
+              <c>qtw: kvy apc blg</c>
+            </r>
+            <r>
+              <c>dka: upq nsz</c>
+            </r>
+            <r>
+              <c>ofo: tde maq</c>
+            </r>
+            <r>
+              <c>viv: smg xqh</c>
+            </r>
+            <r>
+              <c>shw: dlb</c>
+            </r>
+            <r>
+              <c>dnb: itt</c>
+            </r>
+            <r>
+              <c>rtk: vjr uvh</c>
+            </r>
+            <r>
+              <c>tde: bft xrc</c>
+            </r>
+            <r>
+              <c>jrz: hbz</c>
+            </r>
+            <r>
+              <c>vqi: goo iab xkx kic</c>
+            </r>
+            <r>
+              <c>dyq: nxk rir jdm</c>
+            </r>
+            <r>
+              <c>lky: oad ora rcv bum mjb rpx zgf juq fcu tvr ptp itk gfv dmw jca pka nek iuz</c>
+            </r>
+            <r>
+              <c>nxk: xun zcu nly vye ufv</c>
+            </r>
+            <r>
+              <c>iib: thi jlm</c>
+            </r>
+            <r>
+              <c>vsk: wfc</c>
+            </r>
+            <r>
+              <c>ren: you kyc lnb</c>
+            </r>
+            <r>
+              <c>qsb: ldy</c>
+            </r>
+            <r>
+              <c>goo: gfm eeo ffp sli</c>
+            </r>
+            <r>
+              <c>rlt: cre plt vkd rxr</c>
+            </r>
+            <r>
+              <c>pyz: nsz tuc</c>
+            </r>
+            <r>
+              <c>nfv: upi</c>
+            </r>
+            <r>
+              <c>amu: sgh</c>
+            </r>
+            <r>
+              <c>yed: ghq dac yqr</c>
+            </r>
+            <r>
+              <c>qck: hap</c>
+            </r>
+            <r>
+              <c>tul: grs ymg</c>
+            </r>
+            <r>
+              <c>sha: toh</c>
+            </r>
+            <r>
+              <c>bkx: tmg euq</c>
+            </r>
+            <r>
+              <c>cyv: you lnb</c>
+            </r>
+            <r>
+              <c>ugk: pih jtm tul fft</c>
+            </r>
+            <r>
+              <c>tfw: hiq ipe kkx fnd</c>
+            </r>
+            <r>
+              <c>zfc: ydi</c>
+            </r>
+            <r>
+              <c>ykm: zkz pti imc</c>
+            </r>
+            <r>
+              <c>lug: jze jkl</c>
+            </r>
+            <r>
+              <c>tkl: hcm ysa xrc</c>
+            </r>
+            <r>
+              <c>sja: seq ujm knl rjj</c>
+            </r>
+            <r>
+              <c>yer: qkr iib ulx</c>
+            </r>
+            <r>
+              <c>aji: kbv jmy qbv rtk</c>
+            </r>
+            <r>
+              <c>mtv: gmw</c>
+            </r>
+            <r>
+              <c>wef: viv gxy xjl mdc</c>
+            </r>
+            <r>
+              <c>pfx: hiq fnd</c>
+            </r>
+            <r>
+              <c>nhm: qxd</c>
+            </r>
+            <r>
+              <c>svr: lky kfo bet wey</c>
+            </r>
+            <r>
+              <c>ntx: czo von pgy fxk</c>
+            </r>
+            <r>
+              <c>tvi: gms dja jlj</c>
+            </r>
+            <r>
+              <c>eeo: tfw ufe pfx pec jwa</c>
+            </r>
+            <r>
+              <c>myr: qeb jta nwx</c>
+            </r>
+            <r>
+              <c>nhd: nxk jdm</c>
+            </r>
+            <r>
+              <c>vwj: duc svb</c>
+            </r>
+            <r>
+              <c>gfv: pyi yyv</c>
+            </r>
+            <r>
+              <c>ora: ahb fhl</c>
+            </r>
+            <r>
+              <c>jlm: out</c>
+            </r>
+            <r>
+              <c>esv: rmv jno pvz</c>
+            </r>
+            <r>
+              <c>pok: vnk</c>
+            </r>
+            <r>
+              <c>xxk: rin txz</c>
+            </r>
+            <r>
+              <c>htk: zeo ofr tys xzq gnt</c>
+            </r>
+            <r>
+              <c>ysa: fah qhh xqa vup mci nkv uxn vel bwk pxk igw vrt yyr ngj izc vfm jnh dqt</c>
+            </r>
+            <r>
+              <c>zgf: hwr bff qop dwr</c>
+            </r>
+            <r>
+              <c>sgc: evj</c>
+            </r>
+            <r>
+              <c>zdm: phg kou</c>
+            </r>
+            <r>
+              <c>qvl: ual kml mgv</c>
+            </r>
+            <r>
+              <c>htf: tnl cxd zfc vex</c>
+            </r>
+            <r>
+              <c>nxw: dog pti zkz imc</c>
+            </r>
+            <r>
+              <c>hwd: bkv sao cqx fct</c>
+            </r>
+            <r>
+              <c>xkx: eeo gfm</c>
+            </r>
+            <r>
+              <c>kvo: rcm gwf luj</c>
+            </r>
+            <r>
+              <c>bgs: pkr qpq</c>
+            </r>
+            <r>
+              <c>fct: out</c>
+            </r>
+            <r>
+              <c>mrl: cmh</c>
+            </r>
+            <r>
+              <c>jkl: qrt rlt gbj</c>
+            </r>
+            <r>
+              <c>fdi: thx</c>
+            </r>
+            <r>
+              <c>rje: yfi dgv auw</c>
+            </r>
+            <r>
+              <c>use: jmy qbv rtk</c>
+            </r>
+            <r>
+              <c>bff: fzq</c>
+            </r>
+            <r>
+              <c>xqh: bfy</c>
+            </r>
+            <r>
+              <c>vup: ylj vqi</c>
+            </r>
+            <r>
+              <c>mkh: hcm bft</c>
+            </r>
+            <r>
+              <c>jmy: vjr emc</c>
+            </r>
+            <r>
+              <c>gbj: vkd rxr bug</c>
+            </r>
+            <r>
+              <c>azd: qgv zpy lug</c>
+            </r>
+            <r>
+              <c>mck: ofo jde huw rrf</c>
+            </r>
+            <r>
+              <c>upp: ikt zgq</c>
+            </r>
+            <r>
+              <c>wjb: jwa pfx</c>
+            </r>
+            <r>
+              <c>yfi: twk jdg</c>
+            </r>
+            <r>
+              <c>apc: vfb zua mym</c>
+            </r>
+            <r>
+              <c>frc: nql</c>
+            </r>
+            <r>
+              <c>rji: zpy cwo lug</c>
+            </r>
+            <r>
+              <c>upk: rin mdu</c>
+            </r>
+            <r>
+              <c>ngk: inc egf esv</c>
+            </r>
+            <r>
+              <c>auw: jdg ypr twk</c>
+            </r>
+            <r>
+              <c>pkr: noa hwd</c>
+            </r>
+            <r>
+              <c>sli: ufe tfw</c>
+            </r>
+            <r>
+              <c>jwa: hbz fnd</c>
+            </r>
+            <r>
+              <c>egy: mdu dlb rin</c>
+            </r>
+            <r>
+              <c>fye: rjj wnq seq</c>
+            </r>
+            <r>
+              <c>vey: hwd ijb noa</c>
+            </r>
+            <r>
+              <c>hsf: khl wdp sym</c>
+            </r>
+            <r>
+              <c>bgj: cyv</c>
+            </r>
+            <r>
+              <c>wpb: lts fft jtm tul</c>
+            </r>
+            <r>
+              <c>cxd: zvf</c>
+            </r>
+            <r>
+              <c>xot: bkx ltx</c>
+            </r>
+            <r>
+              <c>itt: egq mkh ydr</c>
+            </r>
+            <r>
+              <c>qnw: lbn vnw cbv</c>
+            </r>
+            <r>
+              <c>jvj: ral use</c>
+            </r>
+            <r>
+              <c>pyi: eqw ily vtg</c>
+            </r>
+            <r>
+              <c>oxu: zag wft xnx csk</c>
+            </r>
+            <r>
+              <c>rry: ztn cdj</c>
+            </r>
+            <r>
+              <c>smg: gpx bfy amu</c>
+            </r>
+            <r>
+              <c>fzq: sha</c>
+            </r>
+            <r>
+              <c>yma: nhm vcs</c>
+            </r>
+            <r>
+              <c>hay: toh vnk</c>
+            </r>
+            <r>
+              <c>egq: ysa bft</c>
+            </r>
+            <r>
+              <c>upi: lts jtm</c>
+            </r>
+            <r>
+              <c>uyb: ber</c>
+            </r>
+            <r>
+              <c>vye: ydi jhh zvf</c>
+            </r>
+            <r>
+              <c>jpt: hzl lgn</c>
+            </r>
+            <r>
+              <c>ijb: cqx sao bkv</c>
+            </r>
+            <r>
+              <c>fbj: gmw acd</c>
+            </r>
+            <r>
+              <c>udx: czo von</c>
+            </r>
+            <r>
+              <c>rqt: kwy omo xmj</c>
+            </r>
+            <r>
+              <c>etd: ugq wdp</c>
+            </r>
+            <r>
+              <c>mym: jde huw rrf</c>
+            </r>
+            <r>
+              <c>ber: out</c>
+            </r>
+            <r>
+              <c>nqh: auw wsf dgv yfi</c>
+            </r>
+            <r>
+              <c>hwf: kyc</c>
+            </r>
+            <r>
+              <c>rir: ufv</c>
+            </r>
+            <r>
+              <c>ygz: vey</c>
+            </r>
+            <r>
+              <c>bug: hcm xrc ysa</c>
+            </r>
+            <r>
+              <c>jiv: wnq knl ujm</c>
+            </r>
+            <r>
+              <c>rlc: vnk toh</c>
+            </r>
+            <r>
+              <c>ltg: hzk toh</c>
+            </r>
+            <r>
+              <c>gjj: gnm upi wpb</c>
+            </r>
+            <r>
+              <c>uwf: out</c>
+            </r>
+            <r>
+              <c>ond: zvf ydi</c>
+            </r>
+            <r>
+              <c>wqb: fbj</c>
+            </r>
+            <r>
+              <c>ppw: doe</c>
+            </r>
+            <r>
+              <c>kyc: gea zwb fte rtn ftr rqt esu ffd hdx gia rsz kqv fuz syi piz wef qno xjb kat nlk zup dtz</c>
+            </r>
+            <r>
+              <c>byz: kml mgv qrq</c>
+            </r>
+            <r>
+              <c>wyf: svb pdd</c>
+            </r>
+            <r>
+              <c>vaq: egq ydr</c>
+            </r>
+            <r>
+              <c>fjw: nql phg</c>
+            </r>
+            <r>
+              <c>zev: ezq bfl ahf owp yje</c>
+            </r>
+            <r>
+              <c>zvf: mlq agq rji rry uep myy ead lxk qtw yun plm jom vmc wxo wyt tpj wbq ldb</c>
+            </r>
+            <r>
+              <c>xrb: out</c>
+            </r>
+            <r>
+              <c>rio: hcm bft ysa</c>
+            </r>
+            <r>
+              <c>imc: kfe</c>
+            </r>
+            <r>
+              <c>xnm: vaq itt</c>
+            </r>
+            <r>
+              <c>wyt: uop cdj ztn</c>
+            </r>
+            <r>
+              <c>ngj: wlw pyz</c>
+            </r>
+            <r>
+              <c>wag: msu</c>
+            </r>
+            <r>
+              <c>fnu: lnb you</c>
+            </r>
+            <r>
+              <c>kyn: jhh ydi llo</c>
+            </r>
+            <r>
+              <c>nuo: csk</c>
+            </r>
+            <r>
+              <c>tmp: luj pok rcm yzg</c>
+            </r>
+            <r>
+              <c>ipe: yed fjr flm sqs qxn lci qqm fli hrm mrl zry</c>
+            </r>
+            <r>
+              <c>ztn: rja rpw dnb xnm</c>
+            </r>
+            <r>
+              <c>iuz: jcw fpk vkv lim vda</c>
+            </r>
+            <r>
+              <c>nql: xrc ysa hcm bft</c>
+            </r>
+            <r>
+              <c>pvz: hid</c>
+            </r>
+            <r>
+              <c>pgy: kkx fnd hbz</c>
+            </r>
+            <r>
+              <c>ymg: cxd tnl</c>
+            </r>
+            <r>
+              <c>pgl: toh hzk</c>
+            </r>
+            <r>
+              <c>dmw: ahb nne</c>
+            </r>
+            <r>
+              <c>vjr: zvf jhh</c>
+            </r>
+            <r>
+              <c>vyp: ulx iib qkr</c>
+            </r>
+            <r>
+              <c>smo: mrd die vkq hyp</c>
+            </r>
+            <r>
+              <c>pkx: out</c>
+            </r>
+            <r>
+              <c>sbz: yje owp ahf bfl</c>
+            </r>
+            <r>
+              <c>tql: dja</c>
+            </r>
+            <r>
+              <c>dpd: cki wkv qpn</c>
+            </r>
+            <r>
+              <c>owp: giq</c>
+            </r>
+            <r>
+              <c>cih: nhj hnf jge</c>
+            </r>
+            <r>
+              <c>ikg: jhh llo</c>
+            </r>
+            <r>
+              <c>cre: xrc ysa bft</c>
+            </r>
+            <r>
+              <c>toh: ove tvi qck vmf qnw lzm nnk cko oxu gjj jvj eav agk vsk tql vhk sgc gyr esd zge zne rct ogd qhj ljh</c>
+            </r>
+            <r>
+              <c>tmg: ber auk doh</c>
+            </r>
+            <r>
+              <c>qpn: rje mmm nqh</c>
+            </r>
+            <r>
+              <c>bet: bcz dmd dmw itk iuz nek mjb rpx qew rcv oad ora yqa ptp tvr juq zgf</c>
+            </r>
+            <r>
+              <c>die: lnb</c>
+            </r>
+            <r>
+              <c>hzk: gjj nuo oxu nfv qhj lzm rct ogd dpn nnk vmf gyr sgc vhk zne ove agk vsk tvi qck</c>
+            </r>
+            <r>
+              <c>jgx: yag nhj yew hnf</c>
+            </r>
+            <r>
+              <c>mqb: lnb</c>
+            </r>
+            <r>
+              <c>zag: bep etd fqv</c>
+            </r>
+            <r>
+              <c>vrt: dxc</c>
+            </r>
+            <r>
+              <c>goh: lug qgv cwo</c>
+            </r>
+            <r>
+              <c>tqi: out</c>
+            </r>
+            <r>
+              <c>gms: mpw</c>
+            </r>
+            <r>
+              <c>gcq: bsq kmo nhd tkt</c>
+            </r>
+            <r>
+              <c>zgq: hbz fnd kkx</c>
+            </r>
+            <r>
+              <c>nek: tmi zpk ykm</c>
+            </r>
+            <r>
+              <c>rxr: hcm bft</c>
+            </r>
+            <r>
+              <c>lts: grs jdx kxd htf</c>
+            </r>
+            <r>
+              <c>jno: hid fqb</c>
+            </r>
+            <r>
+              <c>vvf: lnb</c>
+            </r>
+            <r>
+              <c>awr: sja jiv fye</c>
+            </r>
+            <r>
+              <c>kvk: kpy kic goo</c>
+            </r>
+            <r>
+              <c>pti: tmp kfe mbd</c>
+            </r>
+            <r>
+              <c>fum: jhh ydi llo zvf</c>
+            </r>
+            <r>
+              <c>fft: kxd htf</c>
+            </r>
+            <r>
+              <c>sbo: acd gmw vvf</c>
+            </r>
+            <r>
+              <c>glz: hcm xrc ysa</c>
+            </r>
+            <r>
+              <c>vmc: qgv cwo mcp lug</c>
+            </r>
+            <r>
+              <c>pxk: wlw cpn dka</c>
+            </r>
+            <r>
+              <c>kat: qpn</c>
+            </r>
+            <r>
+              <c>sxb: xrc ysa bft</c>
+            </r>
+            <r>
+              <c>hdx: pcg</c>
+            </r>
+            <r>
+              <c>rpx: xxk egy shw</c>
+            </r>
+            <r>
+              <c>emc: llo jhh</c>
+            </r>
+            <r>
+              <c>luj: toh</c>
+            </r>
+            <r>
+              <c>vsl: out</c>
+            </r>
+            <r>
+              <c>jdt: jhh ydi zvf</c>
+            </r>
+            <r>
+              <c>kxt: bgs</c>
+            </r>
+            <r>
+              <c>qgv: jze jkl olh</c>
+            </r>
+            <r>
+              <c>rja: vaq itt</c>
+            </r>
+            <r>
+              <c>inc: oqj pvz</c>
+            </r>
+            <r>
+              <c>vkv: rlc xvx</c>
+            </r>
+            <r>
+              <c>fyd: fxk pgy von</c>
+            </r>
+            <r>
+              <c>giq: toh hzk vnk</c>
+            </r>
+            <r>
+              <c>van: thi jlm</c>
+            </r>
+            <r>
+              <c>yzg: hzk vnk</c>
+            </r>
+            <r>
+              <c>xvx: hzk</c>
+            </r>
+            <r>
+              <c>kou: xrc ysa bft</c>
+            </r>
+            <r>
+              <c>qrq: uvb krv</c>
+            </r>
+            <r>
+              <c>kzl: viv mdc</c>
+            </r>
+            <r>
+              <c>fjr: joi</c>
+            </r>
+            <r>
+              <c>qbv: uvh emc</c>
+            </r>
+            <r>
+              <c>loy: you</c>
+            </r>
+            <r>
+              <c>pcg: nhm vcs</c>
+            </r>
+            <r>
+              <c>whx: nlt bqx cne</c>
+            </r>
+            <r>
+              <c>ajg: toh hzk</c>
+            </r>
+            <r>
+              <c>ulx: jlm iez</c>
+            </r>
+            <r>
+              <c>kfe: gwf yzg</c>
+            </r>
+            <r>
+              <c>ulb: qks xot tez</c>
+            </r>
+            <r>
+              <c>itk: vkv fpk jcw</c>
+            </r>
+            <r>
+              <c>cki: nlc</c>
+            </r>
+            <r>
+              <c>nlc: ppv</c>
+            </r>
+            <r>
+              <c>gih: vnk hzk</c>
+            </r>
+            <r>
+              <c>myy: htk</c>
+            </r>
+            <r>
+              <c>gey: cmh</c>
+            </r>
+            <r>
+              <c>doh: out</c>
+            </r>
+            <r>
+              <c>ibx: qrq</c>
+            </r>
+            <r>
+              <c>mdc: smg</c>
+            </r>
+            <r>
+              <c>hap: jmy</c>
+            </r>
+            <r>
+              <c>zwb: ulb</c>
+            </r>
+            <r>
+              <c>kbv: vjr uvh</c>
+            </r>
+            <r>
+              <c>hbz: sqs qxn jcd qqm yed</c>
+            </r>
+            <r>
+              <c>sqv: out</c>
+            </r>
+            <r>
+              <c>wdp: kyn nnn</c>
+            </r>
+            <r>
+              <c>vex: llo jhh ydi</c>
+            </r>
+            <r>
+              <c>hid: out</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="54" y="175" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="13" />
+          <Fields>
+            <Field name="input" />
+          </Fields>
+          <Data>
+            <r>
+              <c>svr: aaa bbb</c>
+            </r>
+            <r>
+              <c>aaa: fft</c>
+            </r>
+            <r>
+              <c>fft: ccc</c>
+            </r>
+            <r>
+              <c>bbb: tty</c>
+            </r>
+            <r>
+              <c>tty: ccc</c>
+            </r>
+            <r>
+              <c>ccc: ddd eee</c>
+            </r>
+            <r>
+              <c>ddd: hub</c>
+            </r>
+            <r>
+              <c>hub: fff</c>
+            </r>
+            <r>
+              <c>eee: dac</c>
+            </r>
+            <r>
+              <c>dac: fff</c>
+            </r>
+            <r>
+              <c>fff: ggg hhh</c>
+            </r>
+            <r>
+              <c>ggg: out</c>
+            </r>
+            <r>
+              <c>hhh: out</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Template 2</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1014" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Count" action="Sum" rename="Ans" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="18" Connection="data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="True" />
+      <Destination ToolID="18" Connection="iter" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="71" Connection="data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="71" Connection="iter" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="output" />
+      <Destination ToolID="11" Connection="Input8" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output9" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="True" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="True" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day 11</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b26737fc-4b25-4f18-8392-199d98188970" />
+      <Telemetry>
+        <PreviousWorkflowId value="f522ecaf-80b9-4b9f-bade-4a4b856fb8cb" />
+        <OriginWorkflowId value="5959fd81-5d08-4d20-94f0-60f2b2d826ec" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

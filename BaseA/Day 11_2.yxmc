@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Child" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Parent" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Path" selected="True" rename="Right_Path" input="Right_" />
+                <SelectField field="Right_Parent" selected="True" rename="Right_Parent" input="Right_" />
+                <SelectField field="Right_Child" selected="True" rename="Right_Child" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Child" size="54" source="TextInput:" type="V_String" />
+            <Field name="hit_fft" source="TextInput:" type="Int64" />
+            <Field name="hit_dac" source="TextInput:" type="Int64" />
+            <Field name="Count" source="TextInput:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Child" size="54" source="TextInput:" type="V_String" />
+            <Field name="hit_fft" source="TextInput:" type="Int64" />
+            <Field name="hit_dac" source="TextInput:" type="Int64" />
+            <Field name="Count" source="TextInput:" type="Int64" />
+            <Field name="Right_Path" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Parent" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Child" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Path" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Parent" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Child" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Child" selected="True" type="V_String" forced="True" size="54" />
+            <SelectField field="hit_fft" selected="True" type="Int64" size="8" />
+            <SelectField field="hit_dac" selected="True" type="Int64" size="8" />
+            <SelectField field="count" selected="True" type="Int64" size="8" />
+            <SelectField field="Path" selected="False" type="V_String" forced="True" size="99999" />
+            <SelectField field="Parent" selected="False" type="V_String" forced="True" size="99999" />
+            <SelectField field="Group" selected="False" type="V_String" forced="True" size="24" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="54" source="TextInput:" type="V_String" />
+            <Field name="hit_fft" source="TextInput:" type="Int64" />
+            <Field name="hit_dac" source="TextInput:" type="Int64" />
+            <Field name="Count" source="TextInput:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="390" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [Right_Child]='fft' THEN 1&#xA;ELSE [hit_fft]&#xA;ENDIF" field="hit_fft" size="8" type="Int64" enabled="true" />
+            <FormulaField expression="IF [Right_Child]='dac' THEN 1&#xA;ELSE [hit_dac]&#xA;ENDIF" field="hit_dac" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>update hit and counts</AnnotationText>
+          <DefaultAnnotationText>hit_fft = IF [Right_Child]='fft' THEN 1
+ELSE [hit_fft]
+ENDIF
+hit_dac = IF [Right...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="54" source="TextInput:" type="V_String" />
+            <Field name="hit_fft" source="Formula: IF [Right_Child]='fft' THEN 1&#xA;ELSE [hit_fft]&#xA;ENDIF" type="Int64" />
+            <Field name="hit_dac" source="Formula: IF [Right_Child]='dac' THEN 1&#xA;ELSE [hit_dac]&#xA;ENDIF" type="Int64" />
+            <Field name="Count" source="TextInput:" type="Int64" />
+            <Field name="Right_Path" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Parent" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Right_Child" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="486" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Right_Child" action="GroupBy" rename="Child" />
+            <SummarizeField field="hit_fft" action="GroupBy" rename="hit_fft" />
+            <SummarizeField field="hit_dac" action="GroupBy" rename="hit_dac" />
+            <SummarizeField field="count" action="GroupBy" rename="og" />
+            <SummarizeField field="count" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>GB and count</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="2147483647" source="Summarize: GroupBy - Right_Child" type="V_String" />
+            <Field name="hit_fft" source="Summarize: GroupBy - hit_fft" type="Int64" />
+            <Field name="hit_dac" source="Summarize: GroupBy - hit_dac" type="Int64" />
+            <Field name="og" source="Summarize: GroupBy - Count" type="Int64" />
+            <Field name="Count" source="Summarize: Count - Right_Child" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="582" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Count]*[og]" field="Count" size="8" type="Int64" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Count = [Count]*[og]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="2147483647" source="Summarize: GroupBy - Right_Child" type="V_String" />
+            <Field name="hit_fft" source="Summarize: GroupBy - hit_fft" type="Int64" />
+            <Field name="hit_dac" source="Summarize: GroupBy - hit_dac" type="Int64" />
+            <Field name="og" source="Summarize: GroupBy - Count" type="Int64" />
+            <Field name="Count" source="Formula: [Count]*[og]" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Child" selected="True" size="54" />
+            <SelectField field="hit_fft" selected="True" />
+            <SelectField field="hit_dac" selected="True" />
+            <SelectField field="Count" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="54" source="Summarize: GroupBy - Right_Child" type="V_String" />
+            <Field name="hit_fft" source="Summarize: GroupBy - hit_fft" type="Int64" />
+            <Field name="hit_dac" source="Summarize: GroupBy - hit_dac" type="Int64" />
+            <Field name="Count" source="Formula: [Count]+[og]" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>data</Name>
+          <Abbrev>d</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="16" />
+              <Fields>
+                <Field name="Path" />
+                <Field name="Parent" />
+                <Field name="Child" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>0001</c>
+                  <c>svr</c>
+                  <c>aaa</c>
+                </r>
+                <r>
+                  <c>0002</c>
+                  <c>svr</c>
+                  <c>bbb</c>
+                </r>
+                <r>
+                  <c>0003</c>
+                  <c>aaa</c>
+                  <c>fft</c>
+                </r>
+                <r>
+                  <c>0004</c>
+                  <c>fft</c>
+                  <c>ccc</c>
+                </r>
+                <r>
+                  <c>0005</c>
+                  <c>bbb</c>
+                  <c>tty</c>
+                </r>
+                <r>
+                  <c>0006</c>
+                  <c>tty</c>
+                  <c>ccc</c>
+                </r>
+                <r>
+                  <c>0007</c>
+                  <c>ccc</c>
+                  <c>ddd</c>
+                </r>
+                <r>
+                  <c>0008</c>
+                  <c>ccc</c>
+                  <c>eee</c>
+                </r>
+                <r>
+                  <c>0009</c>
+                  <c>ddd</c>
+                  <c>hub</c>
+                </r>
+                <r>
+                  <c>0010</c>
+                  <c>hub</c>
+                  <c>fff</c>
+                </r>
+                <r>
+                  <c>0011</c>
+                  <c>eee</c>
+                  <c>dac</c>
+                </r>
+                <r>
+                  <c>0012</c>
+                  <c>dac</c>
+                  <c>fff</c>
+                </r>
+                <r>
+                  <c>0013</c>
+                  <c>fff</c>
+                  <c>ggg</c>
+                </r>
+                <r>
+                  <c>0014</c>
+                  <c>fff</c>
+                  <c>hhh</c>
+                </r>
+                <r>
+                  <c>0015</c>
+                  <c>ggg</c>
+                  <c>out</c>
+                </r>
+                <r>
+                  <c>0016</c>
+                  <c>hhh</c>
+                  <c>out</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Path" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Parent" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="Child" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>iter</Name>
+          <Abbrev>i</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="2" />
+              <Fields>
+                <Field name="Child" />
+                <Field name="hit_fft" />
+                <Field name="hit_dac" />
+                <Field name="Count" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>aaa</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>1</c>
+                </r>
+                <r>
+                  <c>bbb</c>
+                  <c>0</c>
+                  <c>0</c>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="hit_fft" source="TextInput:" type="Int32" />
+            <Field name="hit_dac" source="TextInput:" type="Int32" />
+            <Field name="Count" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="870" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>iterative</Name>
+          <Abbrev>i</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="762" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>output</Name>
+          <Abbrev>0</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="690" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Child" action="GroupBy" rename="Child" />
+            <SummarizeField field="hit_fft" action="GroupBy" rename="hit_fft" />
+            <SummarizeField field="hit_dac" action="GroupBy" rename="hit_dac" />
+            <SummarizeField field="Count" action="Sum" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>aggregate</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Child" size="2147483647" source="Summarize: GroupBy - Child" type="V_String" />
+            <Field name="hit_fft" source="Summarize: GroupBy - hit_fft" type="Int64" />
+            <Field name="hit_dac" source="Summarize: GroupBy - hit_dac" type="Int64" />
+            <Field name="Count" source="Summarize: Sum - Count" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Left" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="52" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Day 11_2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="207f57de-7507-4a15-83df-a2412423fc06" />
+      <Telemetry>
+        <PreviousWorkflowId value="28e39da5-e735-47ca-9a53-8e33e6a0bcfe" />
+        <OriginWorkflowId value="a9b79025-c179-46e7-aa83-99b9d13644c0" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (6)</Name>
+          <ToolId value="6" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (2)</Name>
+              <ToolId value="2" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (7)</Description>
+              <Name>Macro Output (7)</Name>
+              <ToolId value="7" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (8)</Description>
+              <Name>Macro Output (8)</Name>
+              <ToolId value="8" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>iter</Input>
+        <Output>iterative</Output>
+        <IterationLimit value="999" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="1" Selected="True" />
+        <Tool ToolId="2" Selected="True" />
+        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="7" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
