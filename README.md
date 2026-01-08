@@ -13,7 +13,7 @@ My solutions to AoC 2025:
 |Day 7 | 2|
 |Day 8 | 2|
 |Day 9 | 2|
-|Day 10 | 0|
+|Day 10 | 1|
 |Day 11 | 2|
 |Day 12 | 1|
 
